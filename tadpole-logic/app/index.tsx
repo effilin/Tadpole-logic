@@ -1,7 +1,13 @@
-import { Text } from "react-native"
+import { Link } from "expo-router"
+import { Button, Text, View } from "react-native"
 
 export default function HomePage() {
     return (
-     <Text>Hello World</Text>
+    <View>
+        <Text>Hello World</Text>
+        <Link href={"/about"}>
+           <Button title="About Page"/>
+        </Link>
+     </View>
     )
 }
