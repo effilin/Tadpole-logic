@@ -39,7 +39,8 @@ const styles = StyleSheet.create({
         padding: 5,
         paddingRight: 8,
         paddingBottom: 8,
-        marginRight: 10
+        marginRight: 10,
+        marginLeft: 10
     },
     text:{
         fontSize:20,
