@@ -1,5 +1,6 @@
 import Pond from "@/components/Pond"
 import tw from "tailwind-react-native-classnames";
+import MyButton from "@/components/MyButtons";
 import { Link } from "expo-router"
 import { Button, StyleSheet, Text, View } from "react-native"
 
@@ -11,7 +12,7 @@ export default function HomePage() {
         <View style={tw`flex max-w-1/2`}>
             <Text>Hello World</Text>
             <Link href={"/about"}>
-               <Button title="About Page"/>
+               <h1>About</h1>
             </Link>
         </View>
      </View>

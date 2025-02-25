@@ -11,7 +11,7 @@ export default function Pond() {
 
            <Image
            source={require('../assets/images/pond.png')}
-           style={tw`shrink`}
+           style={tw``}
            resizeMode="contain"/>
 
         </View>
