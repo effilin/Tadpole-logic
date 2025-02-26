@@ -1,20 +1,26 @@
 import tw from "tailwind-react-native-classnames";
-import { View, Image } from "react-native";
-import { Screen } from "expo-router/build/views/Screen";
+import { View, Image, StyleSheet } from "react-native";
 
-
-const pond = {uri:'../'}
 
 export default function Pond() {
     return (
-        <View style={tw`flex`}>
+        <View style={styles.pondBox}>
 
            <Image
            source={require('../assets/images/pond.png')}
-           style={tw``}
+           style={[tw`opacity-75`]}
            resizeMode="contain"/>
 
         </View>
     )
 
 }
+
+const styles = StyleSheet.create({
+    pondBox: {
+        height: 100,
+        width: 100,
+        overflow: 'scroll'
+
+    }
+})
