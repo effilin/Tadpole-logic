@@ -8,17 +8,20 @@ import Sky from "@/components/indexComponent/Sky";
 
 export default function HomePage() {
     return (
+        
         <Sky>
-            <View style={tw`grid grid-flow-col grid-rows-3 gap-4 `}>
-                <View style={tw`row-span-3 border-4 border-indigo-500`}>
+            <View style={tw`flex-1 flex-row`}>
+                <View style={tw`w-1/3 flex-1 border`}>
                    <Pond />
                 </View>
-                <Text style={tw`col-span-2`}>Hello World</Text>
-                <Link 
-                href={"/about"}
-                style={tw`col-span-2 row-span-2`}>
-                   <h1>About</h1>
-                </Link>
+                <View style={tw`flex flex-col justify-center w-2/3 border border-indigo-500`}>
+                    <Text style={tw`border border-indigo-500`}>Hello World</Text>
+                    <Link 
+                    href={"/about"}
+                    style={tw`border border-indigo-500`}>
+                       <h1>About</h1>
+                    </Link>
+                </View>
             </View>
         </Sky>
     
@@ -28,7 +31,6 @@ export default function HomePage() {
 const styles = StyleSheet.create({
     pond:{
         borderColor: "hsla(114, 50.50%, 80.20%, 0.56)",
-        width: 99,
         borderRadius: 5,
     }
 

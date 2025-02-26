@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { StyleSheet, View } from "react-native";
 import { useWindowDimensions } from "react-native";
-
+import tw from "tailwind-react-native-classnames";
 interface SkyProps {
     children: React.ReactNode;
 }
@@ -92,7 +92,8 @@ export default function Sky({children}: SkyProps) {
 
    return(
     
-    <View className="sky" style={{backgroundColor:  `hsl(${backColor.hue}, ${backColor.saturation}%, ${backColor.lightness}%)`, width: width}}>
+    <View  
+    style={[tw``,{backgroundColor:  `hsl(${backColor.hue}, ${backColor.saturation}%, ${backColor.lightness}%)`, width: width}]}>
       {children}
     </View>
  
@@ -101,6 +102,7 @@ export default function Sky({children}: SkyProps) {
 
 const styles = StyleSheet.create({
     sky: {
+    
 
     }
 
