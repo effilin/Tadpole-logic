@@ -1,13 +1,15 @@
 
 import { Stack } from "expo-router";
 import { View } from "react-native";
+
 import MyHeader from "@/components/MyHeader";
+import '../globals.css';
 
 
 
 export default function Layout() {
     return(
-        <View >
+        <View style={{flex: 1}}>
             <Stack
             screenOptions={{
                 header: () => <MyHeader />,

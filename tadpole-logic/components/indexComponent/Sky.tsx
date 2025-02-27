@@ -28,7 +28,8 @@ export default function Sky({children}: SkyProps) {
    const [backColor, setBackColor] = useState<BackgroundColor>(defaultColor);
    const [weather, setWeather] = useState<WeatherData>(defaultWeather);
    const [time, setTime] = useState<number>();
-   const { width } = useWindowDimensions();
+   const { width, height } = useWindowDimensions();
+   console.log( `width:${width}, height:${height}`)
 
    useEffect (() => {
 
@@ -93,7 +94,7 @@ export default function Sky({children}: SkyProps) {
    return(
     
     <View  
-    style={[tw``,{backgroundColor:  `hsl(${backColor.hue}, ${backColor.saturation}%, ${backColor.lightness}%)`, width: width}]}>
+    style={[tw``,{width: width, height: height, backgroundColor:  `hsl(${backColor.hue}, ${backColor.saturation}%, ${backColor.lightness}%)`,}]}>
       {children}
     </View>
  
