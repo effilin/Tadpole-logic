@@ -24,7 +24,7 @@ export default function Sky({children}: SkyProps) {
       condition: "sunny"
    }
 
-   const WEATHER_API_KEY = process.env.NEXT_PUBLIC_WEATHER_KEY;
+   const WEATHER_API_KEY = process.env.EXPO_PUBLIC_WEATHER_KEY;
    const [backColor, setBackColor] = useState<BackgroundColor>(defaultColor);
    const [weather, setWeather] = useState<WeatherData>(defaultWeather);
    const [time, setTime] = useState<number>();

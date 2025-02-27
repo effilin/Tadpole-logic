@@ -4,6 +4,7 @@ import '../globals.css'
 import { Link } from "expo-router"
 import { StyleSheet, Text, View } from "react-native"
 import Sky from "@/components/indexComponent/Sky";
+import ArtCarousel from "@/components/indexComponent/ArtCarousel";
 
 
 export default function HomePage() {
@@ -15,7 +16,7 @@ export default function HomePage() {
                    <Pond />
                 </View>
                 <View style={tw`flex flex-col w-2/3 `}>
-                    <Text style={tw`border border-indigo-500`}>Hello World</Text>
+                    <ArtCarousel/>
                     <Link 
                     href={"/about"}
                     style={tw`border border-indigo-500`}>

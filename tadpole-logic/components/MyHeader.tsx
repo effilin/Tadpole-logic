@@ -5,12 +5,11 @@ import MyButton from "./MyButtons";
 import { Bars3Icon } from "@heroicons/react/24/outline";
 import { red } from "react-native-reanimated/lib/typescript/Colors";
 
-
+const { width } = useWindowDimensions();
 
 const MyHeader = () => {
     const pathname = usePathname();
     const router = useRouter();
-    const { width } = useWindowDimensions();
 
     const titles: Record<string, string> ={
         '/': 'Life Around The Pond',
